@@ -28,7 +28,7 @@
     }
 
     /****** Classes ******/
-    /* Class which defines the main card */
+    /* Style and position for the attribution */
     .attribution {
         font-family: var(--sans-font);
         font-weight: 300;
@@ -39,6 +39,7 @@
         line-height: 2rem;
     }
 
+    /* Defines the main card which contains the text and image */
     .card {
         border-radius: 10px;
         display: grid;
@@ -49,6 +50,7 @@
         min-width: fit-content;
     }
 
+    /* The pre-header */
     .item-kind {
         color: var(--dark-grayish-blue);
         font-family: var(--sans-font);
@@ -97,7 +99,6 @@
     .perfume-description {
         font-family: var(--sans-font);
         font-size: 0.85rem;
-        /* font-weight: 100; */
         color: var(--dark-grayish-blue);
         margin-bottom: 1rem;
         line-height: 1.4rem;
@@ -111,10 +112,8 @@
         padding-top: 1rem;
         padding-left: 2rem;
         padding-right: 2rem;
-        /* z-index: -1; */
         max-height: var(--img-height);
     }
-
 
     /* IDs */
     #add-to-cart {
@@ -149,9 +148,12 @@
 
 @media screen and (max-width: 750px) {
     body {
-        background-color: skyblue;
+        background-color: var(--cream);
         margin: 0px;
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     /****** Classes ******/
@@ -167,11 +169,13 @@
     }
 
     .card {
-        border-style: solid;
+        border-style: hidden;
+        border-radius: 10px;
         display: grid;
         overflow: hidden;
-        /* padding: 2rem; */
         margin: 2rem;
+        /* min-width: fit-content; */
+        width: 343px;
     }
 
     .item-kind {
@@ -180,7 +184,6 @@
         font-size: 0.7rem;
         letter-spacing: 0.3rem;
         text-transform: uppercase;
-        margin-top: 1rem;
     }
 
     /* Set fonts for multiple styles */
@@ -193,7 +196,7 @@
         font-size: 2rem;
         line-height: 95%;
         color: var(--very-dark-blue);
-        margin-block-end: 1.5rem;
+        /* margin-block-end: 1.5rem; */
     }
 
     .prices {
@@ -201,7 +204,7 @@
         align-content: space-evenly;
         display: flex;
         flex-direction: row;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
     }
 
     .price-regular {
@@ -228,7 +231,11 @@
         line-height: 1.4rem;
     }
 
-    .product-info {}
+    .product-info {
+        padding: 1.75rem;
+        padding-top: 1.2rem;
+        background-color: white;
+    }
 
 
     /* IDs */
@@ -245,6 +252,7 @@
         display: flex;
         align-content: center;
         justify-content: center;
+        width: 100%;
     }
 
     #perfume-img-desktop {
@@ -255,7 +263,7 @@
     }
 
     #perfume-img-mobile {
-        max-width: 80vw;
+        max-height: 240px;
     }
 
     #shopping-cart-icon {
