@@ -1,7 +1,7 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&display=swap');
 
-/* Document wide properties */
+/****** Document wide properties ******/
 :root {
     --dark-cyan: hsl(158, 36%, 37%);
     --cream: hsl(30, 38%, 92%);
@@ -12,13 +12,15 @@
     --serif-font: 'Fraunces', serif;
 }
 
-/* Elements */
+/****** Elements ******/
 body {
     background-color: var(--cream);
     margin: 0px;
+    min-height: 100vh;
 }
 
-/* Classes */
+/****** Classes ******/
+/* Class which defines the main card */
 .card {
     border-radius: 2%;
     border-style: solid;
@@ -43,13 +45,17 @@ body {
     grid-template-columns: 1fr 600px 1fr;
     grid-template-rows: 1fr auto 1fr;
     margin: 0px;
+    min-height: 100vh;
 }
 
+/* Set fonts for multiple styles */
 .perfume-brand,
 .price-sale,
 .price-regular {
     font-style: var(--serif-font);
 }
+
+
 
 .perfume-description {
     font-family: var(--sans-font);
