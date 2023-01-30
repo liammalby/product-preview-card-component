@@ -10,6 +10,8 @@
     --white: hsl(0, 0%, 100%);
     --sans-font: 'Montserrat', sans-serif;
     --serif-font: 'Fraunces', serif;
+    --img-height: 444px;
+    --img-width: 296px;
 }
 
 /****** Elements ******/
@@ -25,14 +27,14 @@ body {
 /****** Classes ******/
 /* Class which defines the main card */
 .card {
-    border-radius: 2%;
     border-style: solid;
+    border-radius: 100px;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
     grid-column: 2;
     grid-row: 2;
     margin: 0px;
-
+    max-height: var(--img-height);
+    max-width: calc(2 * var(--img-width));
 }
 
 .item-kind {
@@ -57,17 +59,24 @@ body {
 }
 
 .prices {
-    display: flex;
     align-items: center;
+    align-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1.5rem;
 }
 
 .price-regular {
+    color: var(--dark-grayish-blue);
     width: 50%;
     font-family: var(--sans-font);
     font-size: 0.7rem;
+    padding-left: 1rem;
 }
 
 .price-sale {
+    align-items: center;
+    color: var(--dark-cyan);
     font-size: 2rem;
     width: 50%;
 }
@@ -75,10 +84,10 @@ body {
 .perfume-description {
     font-family: var(--sans-font);
     font-size: 0.85rem;
-    font-weight: 100;
+    /* font-weight: 100; */
     color: var(--dark-grayish-blue);
     margin-bottom: 2rem;
-    line-height: 1.25rem;
+    line-height: 1.4rem;
 }
 
 .product-info {
@@ -86,13 +95,28 @@ body {
     grid-column: 2;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
-    padding: 30px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     z-index: -1;
+    max-height: var(--img-height);
 }
 
 
 /* IDs */
+#add-to-cart {
+    background-color: var(--dark-cyan);
+    border-radius: 10px;
+    border-style: hidden;
+    color: white;
+    font-family: var(--sans-font);
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: -0.01rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 #perfume-img {
     width: 296px;
     grid-column: 1;
