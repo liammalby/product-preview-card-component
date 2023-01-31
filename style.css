@@ -21,7 +21,6 @@
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-#add-to-cart:active {}
 
 /******* DESKTOP ********/
 @media screen and (min-width: 750px) {
