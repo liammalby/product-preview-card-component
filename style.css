@@ -14,7 +14,14 @@
     --img-width: 296px;
 }
 
-/* TODO: Implement hover states */
+/* Common states */
+#add-to-cart:hover {
+    background-color: hsl(158, 36%, 22%);
+    transition: 1000ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#add-to-cart:active {}
 
 /******* DESKTOP ********/
 @media screen and (min-width: 750px) {
@@ -22,11 +29,12 @@
     /****** Elements ******/
     body {
         background-color: var(--cream);
-        display: grid;
-        grid-template-columns: 1fr 600px 1fr;
-        grid-template-rows: 1fr auto 1fr;
+        display: flex;
+        flex-direction: column;
         margin: 0px;
         min-height: 100vh;
+        justify-content: center;
+        align-items: center;
     }
 
     /****** Classes ******/
@@ -45,11 +53,9 @@
     .card {
         border-radius: 10px;
         display: grid;
-        grid-column: 2;
-        grid-row: 2;
         margin: 0px;
         overflow: hidden;
-        min-width: fit-content;
+        width: 500px;
     }
 
     /* The pre-header */
@@ -148,6 +154,7 @@
     }
 }
 
+/******* MOBILE *******/
 @media screen and (max-width: 750px) {
     body {
         background-color: var(--cream);
@@ -156,6 +163,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     /****** Classes ******/
